@@ -98,8 +98,10 @@ python -m streamlit run app.py
    ```
     ![App UI](./files/Specific1.png)
    
-Observe how the CAG chatbot uses the uploaded document to answer contextually.
+Observe how the CAG chatbot uses the uploaded document to answer contextually. 
+6.Repeat the same questions multiple times and observe the vLLM terminal. **e.g. What is a model context protocol server? for 5 consecutive times**. You will notice the **Prefix cache hit rate** increasing indicating the use of previously cached key/value (KV) pairs from earlier prompts for faster inferencing.
 
+   ![App UI](./files/vLLM_output.png)
 ---
 
 ✅ **Done!** You now have a working CPU-based vLLM backend connected to a Streamlit-based local chatbot app with context caching.
