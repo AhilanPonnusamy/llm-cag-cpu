@@ -92,6 +92,7 @@ python -m streamlit run app.py
    Can you provide some examples of Data and File systems MCP servers?
    ```
     ![App UI](./files/Specific1.png)
+   
 Observe how the CAG chatbot uses the uploaded document to answer contextually.
 
 ---
