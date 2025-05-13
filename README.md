@@ -45,12 +45,14 @@ Replace **torch_spda.py** file under vllm\attention\backends with **torch_spda.p
 export VLLM_CPU_KVCACHE_SPACE=16 # KV Cache in GBs
 export HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxx  # Replace with your Hugging Face token
 
-VLLM_USE_CUDA=0 python -m vllm.entrypoints.openai.api_server \
+VLLM_USE_CUDA=0  python -m vllm.entrypoints.openai.api_server \
   --model microsoft/Phi-3-mini-128k-instruct \
   --dtype float32 \
   --max-model-len 16384 \
   --max-num-seqs 1 \
   --swap-space 8 \
+  --disable-sliding-window \
+  --enable-prefix-caching \
   --hf-token $HF_TOKEN
 ```
 
