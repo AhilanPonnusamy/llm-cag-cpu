@@ -4,7 +4,7 @@
 ## 1. Setup vLLM on MacBook Pro (CPUs Only)
 
 ### Prerequisites
-- Clone this repository and move to the root folder.
+- Clone this repository and move in to the folder.
 - Install Python 3.12 (latest version is **not** compatible with vLLM):
 
 ```bash
