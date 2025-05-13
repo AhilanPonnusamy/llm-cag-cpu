@@ -6,9 +6,11 @@ import streamlit as st
 from openai import OpenAI
 
 # Constant for default values
-DEFAULT_MAX_TOKENS = 512
+DEFAULT_MAX_TOKENS = 11384 # saving 5000 tokens for prompt total 16384 tokens
 DEFAULT_TEMPERATURE = 0.1
-MODEL = "google/gemma-3-1b-it"
+temperature = DEFAULT_TEMPERATURE
+max_completion_tokens = DEFAULT_MAX_TOKENS
+MODEL = "microsoft/Phi-3-mini-128k-instruct"
 
 st.title("LLM Chatbot CAG Assistant")
 
@@ -18,7 +20,7 @@ def init_client() -> OpenAI:
     """Initialize the OpenAI client"""
     return OpenAI(
         base_url="http://localhost:8000/v1",
-        api_key="token-abc123",
+        api_key="dummykey",
     )
 
 
@@ -89,10 +91,10 @@ def get_response(messages: list[dict], temperature: float, max_tokens: int) -> s
 
 
 with st.sidebar:
-    max_completion_tokens = st.number_input(
-        "max_completion_tokens", 128, 8192, DEFAULT_MAX_TOKENS
-    )
-    temperature = st.number_input("temperature", 0.0, 2.0, DEFAULT_TEMPERATURE)
+#    max_completion_tokens = st.number_input(
+#        "max_completion_tokens", 128, 32768, DEFAULT_MAX_TOKENS
+#    )
+#    temperature = st.number_input("temperature", 0.0, 2.0, DEFAULT_TEMPERATURE)
     uploaded_file = st.file_uploader(
         "Upload file for context",
         type=["pdf", "txt", "md", "markdown"],
