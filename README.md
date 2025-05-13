@@ -1,5 +1,5 @@
 
-# vLLM Setup and CAG Chatbot on MacBook Pro (CPU-Only)
+# vLLM Setup and CAG(Cache Augmented Generation) Chatbot on MacBook Pro (CPU-Only)
 
 ## 1. Setup vLLM on MacBook Pro (CPUs Only)
 
