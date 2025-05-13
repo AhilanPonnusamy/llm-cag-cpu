@@ -84,14 +84,14 @@ python -m streamlit run app.py
    ```
    What is a Model Context Protocol server?
    ```
-
+   ![App UI](./files/Generic.png)
 4. Check the vLLM terminal — you should see that the prompt now includes the PDF content.
 5. Continue with more questions like:
 
    ```
    Can you provide some examples of Data and File systems MCP servers?
    ```
-
+    ![App UI](./files/Specific1.png)
 Observe how the CAG chatbot uses the uploaded document to answer contextually.
 
 ---
