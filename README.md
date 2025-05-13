@@ -1,6 +1,8 @@
 
 # vLLM Setup and CAG(Cache Augmented Generation) Chatbot on MacBook Pro (CPU-Only)
 
+## Additional details about this POC is provided in this [blog](https://medium.com/beyond-the-buzz-highlighting-the-impact-of-ai-in/the-lazy-devs-guide-to-building-a-local-ai-agent-that-actually-works-30e7f3aee140). ##
+This proof-of-concept (POC) demonstrates how to run the **microsoft/Phi-3-mini-128k-instruct model** on a MacBook Pro using **CPU with vLLM and Streamlit**. It sets up a local OpenAI-compatible API server and integrates a chatbot that supports long-context document Q&A via **Cache Augmented Generation (CAG)**. The guide includes step-by-step instructions for setup, document upload, and interactive querying from the uploaded file.
 ## 1. Setup vLLM on MacBook Pro (CPUs Only)
 
 ### Prerequisites
@@ -94,4 +96,6 @@ Observe how the CAG chatbot uses the uploaded document to answer contextually.
 
 ---
 
-✅ **Done!** You now have a working CPU-based vLLM backend connected to a Streamlit-based local chatbot app with document context.
+✅ **Done!** You now have a working CPU-based vLLM backend connected to a Streamlit-based local chatbot app with context caching.
+
+🎉 **Have Fun! Extend, explore, and enjoy!** 😄
