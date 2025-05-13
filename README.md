@@ -36,8 +36,9 @@ export VLLM_BUILD_WITH_CUDA=0
 # Install vLLM in editable mode
 pip install -e .
 ```
-### Replace torch_sdpa.py (IMPORTANT HACK : for Macbook pro with Apple Chip) 
-Replace **torch_spda.py** file under vllm\attention\backends with **torch_spda.py** available in files folder. This file has a hack to avoid using Intel Extenstion for pytorch and uses SPDA (Standard attention used by PyTorch, supports caching)
+>[!WARNING]
+>### Replace torch_sdpa.py (IMPORTANT HACK : for Macbook pro with Apple Chip) 
+>Replace **torch_spda.py** file under vllm\attention\backends with **torch_spda.py** available in files folder. This file has a hack to avoid using Intel >Extenstion for pytorch and uses SPDA (Standard attention used by PyTorch, supports caching)
 
 ### Start the vLLM Server
 
